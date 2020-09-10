@@ -11,7 +11,6 @@ export const createUser = user => {
 };
 
 export const doPassportLogin = (req, res, next) => {
-  const { email, password } = req.body;
   return passport.authenticate('local', { session: false }, async (err, user, info) => {
     console.log(user);
     if (err) {

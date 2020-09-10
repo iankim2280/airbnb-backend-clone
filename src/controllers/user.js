@@ -22,7 +22,7 @@ export const login = tryCatchToNext(async (req, res, next) => {
   user(req, res, next); // this is necessary
 });
 
-export const logout = tryCatchToNext((req, res, next) => {
+export const logout = tryCatchToNext((req, res) => {
   req.logout();
   res.cookie('token', '');
   returnSuccessJson(res, 200, 'logout successfully');
