@@ -8,7 +8,9 @@ dotenv.config();
 const app = express();
 
 middleWares(app);
-
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 // router
 app.use('/', globalRouter); // /login
 
