@@ -12,10 +12,6 @@ middleWares(app);
 // router
 app.use('/', globalRouter); // /login
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
 app.use((err, req, res, next) => {
   // nodejs error handler
   const error = err;
